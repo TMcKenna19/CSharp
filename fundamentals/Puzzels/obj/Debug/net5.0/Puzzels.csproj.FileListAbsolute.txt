@@ -1,0 +1,15 @@
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/bin/Debug/net5.0/Puzzels.deps.json
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/bin/Debug/net5.0/Puzzels.runtimeconfig.json
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/bin/Debug/net5.0/Puzzels.runtimeconfig.dev.json
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/bin/Debug/net5.0/Puzzels.dll
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/bin/Debug/net5.0/ref/Puzzels.dll
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/bin/Debug/net5.0/Puzzels.pdb
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/obj/Debug/net5.0/Puzzels.csprojAssemblyReference.cache
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/obj/Debug/net5.0/Puzzels.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/obj/Debug/net5.0/Puzzels.AssemblyInfoInputs.cache
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/obj/Debug/net5.0/Puzzels.AssemblyInfo.cs
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/obj/Debug/net5.0/Puzzels.csproj.CoreCompileInputs.cache
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/obj/Debug/net5.0/Puzzels.dll
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/obj/Debug/net5.0/ref/Puzzels.dll
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/obj/Debug/net5.0/Puzzels.pdb
+/Users/yukon/Documents/codingDojo/CSharp/fundamentals/Puzzels/obj/Debug/net5.0/Puzzels.genruntimeconfig.cache
