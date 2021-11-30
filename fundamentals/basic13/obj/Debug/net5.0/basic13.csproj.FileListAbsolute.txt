@@ -1,0 +1,15 @@
+/Users/yukon/Documents/codingDojo/CSharp/basic13/bin/Debug/net5.0/basic13.deps.json
+/Users/yukon/Documents/codingDojo/CSharp/basic13/bin/Debug/net5.0/basic13.runtimeconfig.json
+/Users/yukon/Documents/codingDojo/CSharp/basic13/bin/Debug/net5.0/basic13.runtimeconfig.dev.json
+/Users/yukon/Documents/codingDojo/CSharp/basic13/bin/Debug/net5.0/basic13.dll
+/Users/yukon/Documents/codingDojo/CSharp/basic13/bin/Debug/net5.0/ref/basic13.dll
+/Users/yukon/Documents/codingDojo/CSharp/basic13/bin/Debug/net5.0/basic13.pdb
+/Users/yukon/Documents/codingDojo/CSharp/basic13/obj/Debug/net5.0/basic13.csprojAssemblyReference.cache
+/Users/yukon/Documents/codingDojo/CSharp/basic13/obj/Debug/net5.0/basic13.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yukon/Documents/codingDojo/CSharp/basic13/obj/Debug/net5.0/basic13.AssemblyInfoInputs.cache
+/Users/yukon/Documents/codingDojo/CSharp/basic13/obj/Debug/net5.0/basic13.AssemblyInfo.cs
+/Users/yukon/Documents/codingDojo/CSharp/basic13/obj/Debug/net5.0/basic13.csproj.CoreCompileInputs.cache
+/Users/yukon/Documents/codingDojo/CSharp/basic13/obj/Debug/net5.0/basic13.dll
+/Users/yukon/Documents/codingDojo/CSharp/basic13/obj/Debug/net5.0/ref/basic13.dll
+/Users/yukon/Documents/codingDojo/CSharp/basic13/obj/Debug/net5.0/basic13.pdb
+/Users/yukon/Documents/codingDojo/CSharp/basic13/obj/Debug/net5.0/basic13.genruntimeconfig.cache
