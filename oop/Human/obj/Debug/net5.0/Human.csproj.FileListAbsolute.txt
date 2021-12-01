@@ -1,0 +1,15 @@
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/bin/Debug/net5.0/Human.deps.json
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/bin/Debug/net5.0/Human.runtimeconfig.json
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/bin/Debug/net5.0/Human.runtimeconfig.dev.json
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/bin/Debug/net5.0/Human.dll
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/bin/Debug/net5.0/ref/Human.dll
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/bin/Debug/net5.0/Human.pdb
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/obj/Debug/net5.0/Human.csprojAssemblyReference.cache
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/obj/Debug/net5.0/Human.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/obj/Debug/net5.0/Human.AssemblyInfoInputs.cache
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/obj/Debug/net5.0/Human.AssemblyInfo.cs
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/obj/Debug/net5.0/Human.csproj.CoreCompileInputs.cache
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/obj/Debug/net5.0/Human.dll
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/obj/Debug/net5.0/ref/Human.dll
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/obj/Debug/net5.0/Human.pdb
+/Users/yukon/Documents/codingDojo/CSharp/oop/Human/obj/Debug/net5.0/Human.genruntimeconfig.cache
