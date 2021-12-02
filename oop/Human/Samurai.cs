@@ -9,17 +9,18 @@ namespace Human
             
         }
         
-        // public override int Attack(Human enemy)
-        // {
-        //    int Health = Attack(enemy);
-        //    if (Health < 50)
-        //    {
-        //        enemy.Health = 0;
-        //        Console.WriteLine($"{enemy.Name} health 0");
-        //    }
-        //    return Health;
-        // }
-        // casues stack overflow 
+        public override int Attack(Human enemy)
+        {
+           int Health = enemy.Health;
+           if (Health < 50)
+           {
+               int amount = enemy.Health * -1;
+               enemy.changeHealth(amount);
+               Console.WriteLine($"{enemy.Name} health 0");
+           }
+           return enemy.Health;
+        }
+        
 
         public void Meditate()
         {

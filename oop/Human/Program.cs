@@ -6,7 +6,7 @@ namespace Human
     {
         static void Main(string[] args)
         {
-            Human Tim = new Human("Tim", 75,95,82,100); 
+            Human Tim = new Human("Tim", 75,95,82,49); 
             // Tim.ShowStats();
             // Console.WriteLine("*************");
 
