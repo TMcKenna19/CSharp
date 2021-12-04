@@ -2,24 +2,34 @@
     ViewData["Title"] = "Home Page";
 }
 
+@model Student
+
 <div class="text-center">
     <h1>Dojo Survey</h1>
     <form action="process" method="post">
         <div class="form-group">
             <label for="Name">Your Name</label>
-            <input type="text" name="name">
+            <input asp-for="name" class="form-control">
+            <span asp-validation-for="name" class="text-danger"></span>
         </div>
+
+
         <div class="form-group">
-            <label for="dojoLocation">Dojo Location</label>
-            <select name="dojoLocation" id="dojoLocation">
+            <label asp-for="dojoLocation">Dojo Location</label>                     @* <--- *@
+            <select asp-for="dojoLocation" id="dojoLocation" class="form-control">
+            <option value="dojoLocation" selected disabled hidden></option>
             <option value="sanJose">San Jose</option>
             <option value="la">LA</option>
             <option value="chicago">Chicago</option>
+            <span asp-validation-for="dojoLocation" class="text-danger"></span>  @*  <---  *@
             </select>
         </div>
+
+
         <div class="form-group">
             <label for="favLang">Favorite Language</label>
-            <select name="favLang" id="favlang">
+            <select name="favLang" id="favlang" class="form-control">
+            <option value="" selected disabled hidden>select</option>
             <option value="python">Python</option>Lang
             <option value="javascript">Javascript</option>
             <option value="C#">C#</option>
@@ -27,7 +37,7 @@
         </div>
         <div class="form-group">
             <label for="text">Comment (optional)</label>
-            <textarea name="comment" id="" cols="30" rows="10"></textarea>
+            <textarea name="comment" id="" cols="30" rows="10" class="form-control"></textarea>
         </div>
         <div class="form-group">
             <input type="submit" value="Submit" class="btn btn-dark">

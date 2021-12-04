@@ -13,11 +13,7 @@ namespace surveyValidation.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        // static string name = "";
-        // static string dojoLocation = "";
-        // static string favLang = "";
-        // static string comment = "";
-
+        
         static Student newStudent;
 
         public HomeController(ILogger<HomeController> logger)
@@ -30,27 +26,23 @@ namespace surveyValidation.Controllers
             return View();
         }
 
-        // *****************
-        //   post request 
-
+        
         [HttpPost("process")]
         public IActionResult Process(Student myStudent)
         {
-            // name = uName;
-            // dojoLocation = dLocation;
-            // favLang = fLang;
-            // comment = oComment;
-            newStudent = myStudent;
-            return RedirectToAction("Results");
+            if(ModelState.IsValid)
+            {
+                newStudent = myStudent;
+                return RedirectToAction("Results");
+            }else{
+                return View("Index");
+            }
         }
 
         [HttpGet("results")]
         public IActionResult Results()
         {
-        //   ViewBag.uName = name;
-        //   ViewBag.dLocation = dojoLocation;
-        //   ViewBag.fLang = favLang;
-        //   ViewBag.oComment = comment;
+        
           return View(newStudent);  
         }
         
