@@ -2,11 +2,13 @@
     ViewData["Title"] = "Home Page";
 }
 
-@model Student
+@model Student // This is for validations asp-fro
 
 <div class="text-center">
     <h1>Dojo Survey</h1>
-    <form action="process" method="post">
+
+    
+    <form asp-action="Process" asp-controller="Home" method="post">
         <div class="form-group">
             <label for="Name">Your Name</label>
             <input asp-for="name" class="form-control">
@@ -35,12 +37,18 @@
             <option value="C#">C#</option>
             </select>
         </div>
+
+
         <div class="form-group">
             <label for="text">Comment (optional)</label>
             <textarea name="comment" id="" cols="30" rows="10" class="form-control"></textarea>
         </div>
+
+
         <div class="form-group">
             <input type="submit" value="Submit" class="btn btn-dark">
         </div>
+
+
     </form>
 </div>

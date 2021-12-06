@@ -14,19 +14,24 @@ namespace surveyValidation.Controllers
         private readonly ILogger<HomeController> _logger;
 
         
-        static Student newStudent;
+        static Student newStudent;  //<---- this ------<
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
 
+        //***************
+        //Localhost 5000 
+        //***************
         public IActionResult Index()
         {
             return View();
         }
 
-        
+        //***************
+        //Process results
+        //***************
         [HttpPost("process")]
         public IActionResult Process(Student myStudent)
         {
@@ -39,12 +44,16 @@ namespace surveyValidation.Controllers
             }
         }
 
+        // *************** 
+        // Display Results 
+        // *************** 
         [HttpGet("results")]
         public IActionResult Results()
         {
-        
           return View(newStudent);  
         }
+        
+
         
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
