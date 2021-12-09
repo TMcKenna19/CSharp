@@ -1,0 +1,42 @@
+@model Dish
+<a class="btn btn-lg btn-primary shadow mb-5" href="/">Home</a>
+<h1>Edit @Model.dishName</h1>
+
+<form action="/updateDish/@Model.DishId" method="post">
+        <div class="form-group">
+            <label>Chef's Name</label>
+            <input asp-for="chefName" class="form-control">
+            <span asp-validation-for="chefName" class="text-danger"></span>
+        </div>
+        <div class="form-group" method="post">
+            <label>Dish Name</label>
+            <input asp-for="dishName" class="form-control">
+            <span asp-validation-for="dishName" class="text-danger"></span>
+        </div>
+        <div class="form-group" method="post">
+            <label>Number of Calories</label>
+            <input asp-for="NumCals" class="form-control">
+            <span asp-validation-for="NumCals" class="text-danger"></span>
+        </div>
+        <div>
+            <label for="tasteNum">Tastiness</label>
+            <select asp-for="tasteNum" id="tasteNum">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            </select>
+            <span asp-validation-for="tasteNum" class="text-danger"></span>
+        </div>
+        <div>
+            <label for="text">Description</label>
+            <textarea name="description" id="" cols="30" rows="10"></textarea>
+            <span asp-validation-for="description" class="text-danger"></span>
+        </div>
+        <div>
+            
+            <input type="submit" class="btn btn-lg btn-dark shadow mb-5" value="Update Dish">
+            <a class="btn btn-lg btn-danger shadow mb-5" href="/delete/@Model.DishId">Delete Dish</a>
+        </div>
+    </form>

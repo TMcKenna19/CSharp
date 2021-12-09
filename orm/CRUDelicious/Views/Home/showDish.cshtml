@@ -1,0 +1,11 @@
+@model Dish
+<a class="btn btn-lg btn-primary shadow mb-5" href="/">Home</a>
+<h1>@Model.dishName</h1>
+<h3>@Model.chefName</h3>
+<br>
+<p>@Model.description</p>
+<p>Calories @Model.NumCals</p>
+<p>Tastiness @Model.tasteNum</p>
+
+ 
+ <a href="/editDish/@Model.DishId" class="btn-btn-info">Edit</a>
