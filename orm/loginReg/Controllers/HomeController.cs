@@ -94,6 +94,7 @@ namespace loginReg.Controllers
                     ModelState.AddModelError("Email","Log in info is incorrect");
                     return View("login");
                 }
+                HttpContext.Session.SetInt32("UserId", userinDb.UserId); //<---
                 return RedirectToAction("Success");
             }  else {
                 return View("login");
@@ -101,14 +102,17 @@ namespace loginReg.Controllers
             
         }
 
-        // ************
-        // User Session 
-        // ************
-        // [HttpGet("success")]
-        // public IActionResult userSession()
-        // {
-        //     if(HttpContext.Session.SetInt32(UserId) == null)
-        // }
+        //************
+        //Logout Route
+        //************
+        [HttpGet("logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("login");
+        }
+
+
 
 
         public IActionResult Privacy()
