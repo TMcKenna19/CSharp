@@ -42,11 +42,3 @@ namespace loginReg.Models
 }
 
 
-//data flow 
-// Model [x]
-// Form [x]
-// Post []
-// Save []
-// Retrieve []
-// Render []
-//

@@ -8,6 +8,9 @@ using Microsoft.Extensions.Logging;
 using loginReg.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Http;
+
+
 
 namespace loginReg.Controllers
 {
@@ -98,6 +101,14 @@ namespace loginReg.Controllers
             
         }
 
+        // ************
+        // User Session 
+        // ************
+        // [HttpGet("success")]
+        // public IActionResult userSession()
+        // {
+        //     if(HttpContext.Session.SetInt32(UserId) == null)
+        // }
 
 
         public IActionResult Privacy()

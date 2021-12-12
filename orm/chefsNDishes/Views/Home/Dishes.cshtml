@@ -1,0 +1,35 @@
+@model Dish
+
+<h1 class="text-center">Dishes | <a href="/">Chefs</a></h1>
+<a class="btn btn-lg btn-dark shadow mb-5" href="/dishesNew">Add a Dish</a>
+
+<h2 class="text-center">Yum, take a look at our tasty dishes!</h2>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Name</th>
+      @* <th scope="col">Chef</th> *@
+      <th scope="col">Tastiness</th>
+      <th scope="col">Calories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+            @{
+                foreach(Dish d in ViewBag.AllDishes)
+                {
+                    <td>@d.nameOfDish</td>
+                    @* <td>@d.chefFName, @d.chefLName</td> *@
+                    <td>@d.tastiness</td>
+                    <td>@d.numCals</td>
+                }
+            }
+          </tr>
+  </tbody>
+</table>
+
+@* issues *@
+@* table css *@
+@* chefs name for dish *@
