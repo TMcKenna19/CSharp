@@ -42,11 +42,12 @@ namespace loginReg
             }
             app.UseStaticFiles();
 
+            app.UseSession(); //<--- added
+            
             app.UseRouting();
 
             app.UseAuthorization();
 
-            app.UseSession(); //<--- added
 
             app.UseEndpoints(endpoints =>
             {

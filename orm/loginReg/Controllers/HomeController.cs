@@ -61,8 +61,15 @@ namespace loginReg.Controllers
         // **************
         [HttpGet("success")]
         public IActionResult Success()
-        {
+        {   
+            
+            if(HttpContext.Session.GetInt32("UserId") == null)
+            {
+            return RedirectToAction("login");
+
+        } else{
             return View();
+            } 
         }
 
         // *****************
