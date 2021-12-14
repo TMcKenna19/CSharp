@@ -17,21 +17,18 @@
             <th>Age:</th>
             <th># of Dishes</th>
           </tr>
-          <tr>
+          
             @{
                 foreach(Chef c in ViewBag.AllChefs)
                 {
+                    <tr>
                     <td>@c.chefFName, @c.chefLName</td>
-                    <td>@c.chefDob</td>
+                    <td>@(DateTime.Today.Year - @c.chefDob.Year)</td>
                     <td></td>
+                    </tr>
                 }
             }
-          </tr>
+          
         </table>
     </div>
 </div>
-
-@* issues  *@
-@* show age /chef dob model needs to be changed *@
-@* table css *@
-@* show num dishes *@

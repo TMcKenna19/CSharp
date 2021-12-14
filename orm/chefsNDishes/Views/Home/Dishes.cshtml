@@ -10,26 +10,25 @@
     <tr>
       
       <th scope="col">Name</th>
-      @* <th scope="col">Chef</th> *@
+      <th scope="col">Chef</th>
       <th scope="col">Tastiness</th>
       <th scope="col">Calories</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
+    
             @{
                 foreach(Dish d in ViewBag.AllDishes)
                 {
+                    <tr>
                     <td>@d.nameOfDish</td>
-                    @* <td>@d.chefFName, @d.chefLName</td> *@
+                    <td>@d.MyChef.chefFName, @d.MyChef.chefLName</td>
                     <td>@d.tastiness</td>
                     <td>@d.numCals</td>
+                    </tr>
                 }
             }
-          </tr>
+          
   </tbody>
 </table>
 
-@* issues *@
-@* table css *@
-@* chefs name for dish *@

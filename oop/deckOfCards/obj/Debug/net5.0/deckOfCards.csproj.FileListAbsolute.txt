@@ -1,0 +1,15 @@
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/bin/Debug/net5.0/deckOfCards.deps.json
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/bin/Debug/net5.0/deckOfCards.runtimeconfig.json
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/bin/Debug/net5.0/deckOfCards.runtimeconfig.dev.json
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/bin/Debug/net5.0/deckOfCards.dll
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/bin/Debug/net5.0/ref/deckOfCards.dll
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/bin/Debug/net5.0/deckOfCards.pdb
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/obj/Debug/net5.0/deckOfCards.csprojAssemblyReference.cache
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/obj/Debug/net5.0/deckOfCards.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/obj/Debug/net5.0/deckOfCards.AssemblyInfoInputs.cache
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/obj/Debug/net5.0/deckOfCards.AssemblyInfo.cs
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/obj/Debug/net5.0/deckOfCards.csproj.CoreCompileInputs.cache
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/obj/Debug/net5.0/deckOfCards.dll
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/obj/Debug/net5.0/ref/deckOfCards.dll
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/obj/Debug/net5.0/deckOfCards.pdb
+/Users/yukon/Documents/codingDojo/CSharp/oop/deckOfCards/obj/Debug/net5.0/deckOfCards.genruntimeconfig.cache

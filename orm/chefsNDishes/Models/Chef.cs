@@ -18,7 +18,7 @@ namespace chefsNDishes.Models
         public string chefLName {get;set;}
 
         // [Required(ErrorMessage = "Chef must have a date of birth")]
-        public int chefDob {get;set;}
+        public DateTime chefDob {get;set;}
 
         //set up a list of students
         public List<Dish> MyDishes {get;set;}

@@ -9,8 +9,8 @@ using chefsNDishes.Models;
 namespace chefsNDishes.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20211211215213_FirstMigration")]
-    partial class FirstMigration
+    [Migration("20211213223550_firstmigration")]
+    partial class firstmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,13 +31,15 @@ namespace chefsNDishes.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("chefDob")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("chefDob")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("chefFName")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("chefLName")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.HasKey("ChefId");
@@ -61,9 +63,11 @@ namespace chefsNDishes.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("description")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("nameOfDish")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int>("numCals")

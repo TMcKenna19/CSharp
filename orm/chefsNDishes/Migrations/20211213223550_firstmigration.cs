@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace chefsNDishes.Migrations
 {
-    public partial class FirstMigration : Migration
+    public partial class firstmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,9 +14,9 @@ namespace chefsNDishes.Migrations
                 {
                     ChefId = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    chefFName = table.Column<string>(nullable: true),
-                    chefLName = table.Column<string>(nullable: true),
-                    chefDob = table.Column<int>(nullable: false),
+                    chefFName = table.Column<string>(nullable: false),
+                    chefLName = table.Column<string>(nullable: false),
+                    chefDob = table.Column<DateTime>(nullable: false),
                     CreatedAt = table.Column<DateTime>(nullable: false),
                     UpdatedAt = table.Column<DateTime>(nullable: false)
                 },
@@ -31,9 +31,9 @@ namespace chefsNDishes.Migrations
                 {
                     dishId = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    nameOfDish = table.Column<string>(nullable: true),
+                    nameOfDish = table.Column<string>(nullable: false),
                     numCals = table.Column<int>(nullable: false),
-                    description = table.Column<string>(nullable: true),
+                    description = table.Column<string>(nullable: false),
                     tastiness = table.Column<int>(nullable: false),
                     ChefId = table.Column<int>(nullable: false),
                     CreatedAt = table.Column<DateTime>(nullable: false),
