@@ -57,34 +57,6 @@ namespace chefsNDishes.Controllers
            }
         } 
 
-        // [HttpPost("saveChef")]
-        // public IActionResult saveChef(Chef newChef, DateTime chefDob)
-        // {
-        //     if(DateTime.Now.Year - chefDob.Year < 18)
-        //         {
-        //             ModelState.AddModelError("Age", "Invalid Date, Must be at least 18!");
-        //             return View("addChef");
-        //         }
-
-        //     if(ModelState.IsValid)
-        //     {
-        //         if(_context.Chef.Any(c => c.chefFName == newChef.FirstName && c.chefLName == newChef.chefLName))
-        //         {
-
-        //             ModelState.AddModelError("FirstName", "Chef Already Exists!");
-                    
-        //             return View("addChef");
-        //         } 
-        //         age = DateTime.Now.Year - chefDob.Year;
-        //         newChef.Age = age;
-        //         _context.Add(newChef);
-        //         _context.SaveChanges();
-        //         return RedirectToAction("Index");
-        //     }
-
-        //     return View("NewChef");
-        // }
-
         //**************
         // dishes route
         //**************
