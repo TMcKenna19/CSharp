@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Product
+
+<div class="text-center row">
+        <div class="col-8">
+        <h2>New Product</h2>
+        <form action="addProduct" method="post">
+            <div class="form-group">
+                <label for="prodName">Name</label>
+                <input asp-for="prodName" class="form-control">
+                <span asp-validation-for="prodName"></span>
+            </div>
+            <div class="form-group">
+                <label for="prodName">Description</label>
+                <textarea asp-for="prodDescription" class="form-control"></textarea>
+                <span asp-validation-for="prodDescription"></span>
+            </div>
+            <div class="form-group">
+                <label for="prodPrice">Price</label>
+                <input asp-for="prodPrice" class="form-control">
+                <span asp-validation-for="prodPrice"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-dark" class="Add Product">Create</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-4">
+        <h2>Existing Products</h2>
+        @* check point *@
+    </div>
+
+</div>
