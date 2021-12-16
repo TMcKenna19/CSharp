@@ -3,15 +3,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace productsCategories.Models
 {
-    public class Associations
+    public class Association
     {
         [Key]
 
-        public int AssociationsId {get; set;}
+        public int AssociationId {get; set;}
 
-        public int ProdId {get; set;}
+        public int ProductId {get; set;}
 
-        public int CatId {get; set;}
+        public int CategoryId {get; set;}
 
         public Category Category {get; set;}
 

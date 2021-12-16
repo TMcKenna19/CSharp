@@ -2,7 +2,9 @@
     ViewData["Title"] = "Home Page";
 }
 @model Product
-
+<div class="text-center">
+    <h1 class="text-center">Products | <a href="/categories">Categories</a></h1>
+</div>
 <div class="text-center row">
         <div class="col-8">
         <h2>New Product</h2>
@@ -13,7 +15,7 @@
                 <span asp-validation-for="prodName"></span>
             </div>
             <div class="form-group">
-                <label for="prodName">Description</label>
+                <label for="prodDescription">Description</label>
                 <textarea asp-for="prodDescription" class="form-control"></textarea>
                 <span asp-validation-for="prodDescription"></span>
             </div>
@@ -29,7 +31,13 @@
     </div>
     <div class="col-4">
         <h2>Existing Products</h2>
-        @* check point *@
+        @{
+            foreach(Product p in ViewBag.allProducts)
+            {
+                <p><a href="/product/@p.ProductId">@p.prodName</a></p>
+            }
+        }
     </div>
 
 </div>
+

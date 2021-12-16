@@ -7,7 +7,7 @@ namespace productsCategories.Models
     public class Product
     {
         [Key]
-        public int ProdId {get; set;}
+        public int ProductId {get; set;}
 
         [Required]
         public string prodName {get; set;}
@@ -21,7 +21,7 @@ namespace productsCategories.Models
         public DateTime CreatedAt {get; set;} = DateTime.Now;
         public DateTime UpdatedAt {get; set;} = DateTime.Now;
 
-        public List<Associations> AssociationsList {get; set;}
+        public List<Association> AssociationsList {get; set;}
 
     }
 }

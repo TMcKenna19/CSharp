@@ -1,0 +1,23 @@
+@model Product
+
+
+<h1>@Model.prodName</h1>
+
+<form action="addProdToCat" method="post">
+    <div class="form-group">
+        <label for="CategoryId">Add a Product to a Category</label>
+        <select name="CategoryId" class="form-control col-4">
+            @{
+                foreach(Category c in ViewBag.allCategories)
+                {
+                <option value="@c.CategoryId">@c.catName</option>
+                }
+            }
+
+        </select>
+    </div>
+    <input type="hidden" name="ProductId" value="@Model.ProductId">
+    <button type="submit" class="btn btn-dark" class="Add Product">Add Category</button>
+</form>
+
+@* set up display categories in h1  *@

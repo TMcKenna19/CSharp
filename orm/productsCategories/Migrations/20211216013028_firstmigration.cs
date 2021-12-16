@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace productsCategories.Migrations
 {
-    public partial class FirstMigration : Migration
+    public partial class firstmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace productsCategories.Migrations
                 name: "Categories",
                 columns: table => new
                 {
-                    CatId = table.Column<int>(nullable: false)
+                    CategoryId = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     catName = table.Column<string>(nullable: false),
                     CreatedAt = table.Column<DateTime>(nullable: false),
@@ -20,14 +20,14 @@ namespace productsCategories.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Categories", x => x.CatId);
+                    table.PrimaryKey("PK_Categories", x => x.CategoryId);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
-                    ProdId = table.Column<int>(nullable: false)
+                    ProductId = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     prodName = table.Column<string>(nullable: false),
                     prodDescription = table.Column<string>(nullable: false),
@@ -37,7 +37,7 @@ namespace productsCategories.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Products", x => x.ProdId);
+                    table.PrimaryKey("PK_Products", x => x.ProductId);
                 });
 
             migrationBuilder.CreateTable(
@@ -46,37 +46,35 @@ namespace productsCategories.Migrations
                 {
                     AssociationsId = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    ProdId = table.Column<int>(nullable: false),
-                    CatId = table.Column<int>(nullable: false),
-                    CategoryCatId = table.Column<int>(nullable: true),
-                    ProductProdId = table.Column<int>(nullable: true)
+                    ProductId = table.Column<int>(nullable: false),
+                    CategoryId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Associations", x => x.AssociationsId);
                     table.ForeignKey(
-                        name: "FK_Associations_Categories_CategoryCatId",
-                        column: x => x.CategoryCatId,
+                        name: "FK_Associations_Categories_CategoryId",
+                        column: x => x.CategoryId,
                         principalTable: "Categories",
-                        principalColumn: "CatId",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "CategoryId",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Associations_Products_ProductProdId",
-                        column: x => x.ProductProdId,
+                        name: "FK_Associations_Products_ProductId",
+                        column: x => x.ProductId,
                         principalTable: "Products",
-                        principalColumn: "ProdId",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "ProductId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Associations_CategoryCatId",
+                name: "IX_Associations_CategoryId",
                 table: "Associations",
-                column: "CategoryCatId");
+                column: "CategoryId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Associations_ProductProdId",
+                name: "IX_Associations_ProductId",
                 table: "Associations",
-                column: "ProductProdId");
+                column: "ProductId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

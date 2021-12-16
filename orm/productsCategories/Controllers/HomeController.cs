@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using productsCategories.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace productsCategories.Controllers
 {
@@ -23,9 +24,90 @@ namespace productsCategories.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.allProducts = _context.Products.OrderBy(a => a.prodName).ToList();
             return View();
         }
 
+        //***************
+        // save product
+        //***************
+        [HttpPost("addProduct")]
+        public IActionResult addProduct (Product newProduct)
+        {
+           if(ModelState.IsValid)
+           {    
+               _context.Add(newProduct); //<--adds to db
+               _context.SaveChanges();//<--saves to db
+               return RedirectToAction("Index");
+           }else{
+               ViewBag.allProducts = _context.Products.OrderBy(a => a.prodName).ToList();
+               return View("Index");
+           }
+        } 
+
+        //***************
+        // category route 
+        //***************
+        [HttpGet("categories")]
+        public IActionResult Categories()
+        {   
+            ViewBag.allCategories = _context.Categories.OrderBy(c => c.catName).ToList();
+            return View();
+        }
+
+        //***************
+        // save category
+        //***************
+        [HttpPost("addCategory")]
+        public IActionResult addCategory (Category newCategory)
+        {
+           if(ModelState.IsValid)
+           {    
+               _context.Add(newCategory); //<--adds to db
+               _context.SaveChanges();//<--saves to db
+               return RedirectToAction("categories");
+           }else{
+               ViewBag.allCategories = _context.Categories.OrderBy(c => c.catName).ToList();
+               return View("categories");
+           }
+        } 
+
+        //*************
+        // one product
+        //*************
+        [HttpGet("product/{prodId}")]
+        public IActionResult oneProduct(int prodId)
+        {   
+            Product one = _context.Products.Include(f => f.AssociationsList).ThenInclude(g => g.Category).FirstOrDefault(p => p.ProductId == prodId);
+            ViewBag.allCategories = _context.Categories.OrderBy(c => c.catName).ToList();
+            return View(one);
+        }
+        // just set up include categories// 
+
+        // ***************
+        //  addProdToCat
+        // ***************
+        [HttpPost("/product/addProdToCat")]
+        public IActionResult addProdToCat(Association newProdToCat)
+        {   
+            _context.Add(newProdToCat);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        
+
+
+
+
+
+
+
+
+        
+        //xxxxxxxxxxxxxxxxxxxxxxxxxx//
+        //        STOP
+        //xxxxxxxxxxxxxxxxxxxxxxxxxx//
         public IActionResult Privacy()
         {
             return View();
