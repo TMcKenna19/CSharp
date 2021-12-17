@@ -21,7 +21,7 @@
         @{
             foreach(Category c in ViewBag.allCategories)
             {
-                <p>@c.catName</p>
+                <p><a href="/category/@c.CategoryId">@c.catName</a></p>
             }
         }
     </div>

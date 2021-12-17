@@ -1,0 +1,32 @@
+@model Category
+
+
+<h1>@Model.catName</h1>
+<ul>
+    @{
+        foreach(Association a in Model.AssociationsList)
+        {
+            <li>@a.Product.prodName</li>
+        }
+    }
+</ul>
+
+<form action="addCatToProd" method="post">
+    <div class="form-group">
+        <label for="ProductId">Add a Category to a Product</label>
+        <select name="ProdcutId" class="form-control col-4">
+            @{
+                foreach(Product p in ViewBag.allProducts)
+                {
+                <option value="@p.ProductId">@p.prodName</option>
+                }
+            }
+
+        </select>
+    </div>
+    <input type="hidden" name="CategoryId" value="@Model.CategoryId">
+    <button type="submit" class="btn btn-dark" class="Add Product">Add Prodcut</button>
+</form>
+
+
+@* display select a category working  *@

@@ -82,7 +82,7 @@ namespace productsCategories.Controllers
             ViewBag.allCategories = _context.Categories.OrderBy(c => c.catName).ToList();
             return View(one);
         }
-        // just set up include categories// 
+        
 
         // ***************
         //  addProdToCat
@@ -94,6 +94,23 @@ namespace productsCategories.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        //**************
+        // one category
+        //**************
+        [HttpGet("category/{categoryId}")]
+        public IActionResult oneCategory(int categoryId)
+        {   
+            Category one = _context.Categories.Include(f => f.AssociationsList).ThenInclude(g => g.Product).FirstOrDefault(p => p.CategoryId == categoryId);
+            ViewBag.allProducts = _context.Products.OrderBy(p => p.prodName).ToList();
+            return View(one);
+        }
+
+        // *************
+        // addCatToProd
+        // *************
+
+
 
         
 

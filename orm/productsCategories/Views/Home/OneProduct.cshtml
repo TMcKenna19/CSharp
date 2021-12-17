@@ -2,6 +2,14 @@
 
 
 <h1>@Model.prodName</h1>
+<ul>
+    @{
+        foreach(Association a in Model.AssociationsList)
+        {
+            <li>@a.Category.catName</li>
+        }
+    }
+</ul>
 
 <form action="addProdToCat" method="post">
     <div class="form-group">
@@ -20,4 +28,3 @@
     <button type="submit" class="btn btn-dark" class="Add Product">Add Category</button>
 </form>
 
-@* set up display categories in h1  *@

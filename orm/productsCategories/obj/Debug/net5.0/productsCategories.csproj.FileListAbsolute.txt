@@ -49,3 +49,4 @@
 /Users/yukon/Documents/codingDojo/CSharp/orm/productsCategories/bin/Debug/net5.0/Pomelo.JsonObject.dll
 /Users/yukon/Documents/codingDojo/CSharp/orm/productsCategories/obj/Debug/net5.0/Razor/Views/Home/Categories.cshtml.g.cs
 /Users/yukon/Documents/codingDojo/CSharp/orm/productsCategories/obj/Debug/net5.0/Razor/Views/Home/OneProduct.cshtml.g.cs
+/Users/yukon/Documents/codingDojo/CSharp/orm/productsCategories/obj/Debug/net5.0/Razor/Views/Home/OneCategory.cshtml.g.cs
