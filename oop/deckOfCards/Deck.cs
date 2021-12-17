@@ -48,14 +48,14 @@ namespace deckOfCards
 
         public void Shuffle()
         {
-            List<Card> cards2shuffle = this.cards;
+            List<Card> cardsShuffle = this.cards;
             List<Card> shuffled = new List<Card>();
             Random randy = new Random();
-            while(cards2shuffle.Count > 0)
+            while(cardsShuffle.Count > 0)
             {
-                int idx = randy.Next(0, cards2shuffle.Count);
-                shuffled.Add(cards2shuffle[idx]);
-                cards2shuffle.RemoveAt(idx);
+                int idx = randy.Next(0, cardsShuffle.Count);
+                shuffled.Add(cardsShuffle[idx]);
+                cardsShuffle.RemoveAt(idx);
             }
             this.cards = shuffled;
         }

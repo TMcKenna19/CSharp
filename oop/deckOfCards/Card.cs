@@ -5,7 +5,7 @@ namespace deckOfCards
 {
     class Card
     {
-        private string sVal;
+        private string suitVal;
         private int value;
 
         private string suit;
@@ -16,19 +16,19 @@ namespace deckOfCards
             switch(val)
             {
                 case 11:
-                    sVal = "Jack";
+                    suitVal = "Jack";
                     break;
                 case 12:
-                    sVal = "Queen";
+                    suitVal = "Queen";
                     break;
                 case 13:
-                    sVal = "King";
+                    suitVal = "King";
                     break;
                 case 1:
-                    sVal = "Ace";
+                    suitVal = "Ace";
                     break;
                 default:
-                    sVal = val.ToString();
+                    suitVal = val.ToString();
                     break;
             }
             suit = s;
@@ -37,7 +37,7 @@ namespace deckOfCards
 
         public void SayCard()
         {
-            System.Console.WriteLine("The {0} of {1}", sVal, suit);
+            System.Console.WriteLine("The {0} of {1}", suitVal, suit);
         }
 
     }
