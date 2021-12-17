@@ -109,7 +109,13 @@ namespace productsCategories.Controllers
         // *************
         // addCatToProd
         // *************
-
+        [HttpPost("/category/addCatToProd")]
+        public IActionResult addCatToProd(Association newCatToProd)
+        {   
+            _context.Add(newCatToProd);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
 
         
