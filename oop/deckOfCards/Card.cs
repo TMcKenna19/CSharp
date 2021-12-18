@@ -11,7 +11,7 @@ namespace deckOfCards
         private string suit;
 
         public static string[] Suits = new string[4] {"Spades", "Hearts", "Diamonds", "Clubs"};
-        public Card(string s, int val)
+        public Card(string s, int Val)
         {
             switch(val)
             {
