@@ -37,7 +37,7 @@ namespace WeddingPlanner.Controllers
             {
                 if(_context.Users.Any(u => u.Email == newUser.Email))
                 {
-                    ModelState.AddModelError("email", "Email already in use");
+                    ModelState.AddModelError("Email", "Email already in use");
                     return View("Index");
                 }
 
@@ -46,12 +46,69 @@ namespace WeddingPlanner.Controllers
                 _context.Add(newUser);  //Add newUser to database 
                 _context.SaveChanges(); //Saves newUser to database
 
-                return RedirectToAction("Success");
+                return RedirectToAction("Dashboard");
 
             } else{
                 return View("Index");
             }
+            // register is working with success route commented out. 
         }
+
+        // *******************
+        // Login Route Process 
+        // *******************
+        [HttpPost("loginProcess")]
+        public IActionResult Login(LogInUser logInUser)
+        {
+            if(ModelState.IsValid)
+            {   
+                User userinDb = _context.Users.FirstOrDefault(u => u.Email == logInUser.LogInEmail);
+                if(userinDb == null){
+                    ModelState.AddModelError("Email","Log in info is incorrect");
+                    return View("Index");
+                }
+                PasswordHasher<LogInUser> Hasher = new PasswordHasher<LogInUser>();
+                PasswordVerificationResult result = Hasher.VerifyHashedPassword(logInUser, userinDb.Password, logInUser.LogInPassword);
+                if(result == 0){
+                    ModelState.AddModelError("Email","Log in info is incorrect");
+                    return View("Index");
+                }
+                HttpContext.Session.SetInt32("UserId", userinDb.UserId); //<---
+                return RedirectToAction("Dashboard"); //try ->"Index" //try->dashboard
+            }  else {
+                return View("Index"); //try -> Dashboard
+            }
+            
+        }
+
+        // **************
+        // Success Route 
+        // **************
+        // [HttpGet("success")]
+        // public IActionResult Success()
+        // {   
+            
+        //     if(HttpContext.Session.GetInt32("UserId") == null)
+        //     {
+        //     return RedirectToAction("index");
+
+        // } else{
+        //     return View("Dashboard");
+        //     } 
+        // }
+
+        // ***************
+        // dashboard route
+        // ***************
+        [HttpGet("dashboard")]
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
+
+
+
+
 
         //xxxxxxxxxxxxxxxxxxxxxxxxxx//
         public IActionResult Privacy()

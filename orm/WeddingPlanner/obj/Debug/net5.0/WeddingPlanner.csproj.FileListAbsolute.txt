@@ -47,3 +47,5 @@
 /Users/yukon/Documents/codingDojo/CSharp/orm/WeddingPlanner/obj/Debug/net5.0/ref/WeddingPlanner.dll
 /Users/yukon/Documents/codingDojo/CSharp/orm/WeddingPlanner/obj/Debug/net5.0/WeddingPlanner.pdb
 /Users/yukon/Documents/codingDojo/CSharp/orm/WeddingPlanner/obj/Debug/net5.0/WeddingPlanner.genruntimeconfig.cache
+/Users/yukon/Documents/codingDojo/CSharp/orm/WeddingPlanner/obj/Debug/net5.0/Razor/Views/Home/Dashboard.cshtml.g.cs
+/Users/yukon/Documents/codingDojo/CSharp/orm/WeddingPlanner/obj/Debug/net5.0/Razor/Views/Home/_LogInUser.cshtml.g.cs
