@@ -73,10 +73,10 @@ namespace WeddingPlanner.Controllers
                     ModelState.AddModelError("Email","Log in info is incorrect");
                     return View("Index");
                 }
-                HttpContext.Session.SetInt32("UserId", userinDb.UserId); //<---
-                return RedirectToAction("Dashboard"); //try ->"Index" //try->dashboard
+                HttpContext.Session.SetInt32("UserId", userinDb.UserId); 
+                return RedirectToAction("Dashboard"); 
             }  else {
-                return View("Index"); //try -> Dashboard
+                return View("Index");
             }
             
         }
