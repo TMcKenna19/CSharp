@@ -1,0 +1,40 @@
+@model Hobby
+
+<h1>Welcome***{Name}</h1>
+<a href="logout">logout</a>
+
+<h2 class="text-center">Dojo Activty Center</h2>
+<br>
+<table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Activty</th>
+      <th scope="col">Date and Time</th>
+      <th scope="col">Duration</th>
+      <th scope="col">Event Coordinator</th>
+      <th scope="col"># of Participants</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+            @{
+                foreach(Hobby h in ViewBag.AllHobbies)
+                {
+                    <tr>
+                    <td>@h.HobbyTitle</td>
+                    <td>@h.HobbyDate</td>
+                    <td>@h.HobbyDuration</td>
+                    <td></td>
+                    <td></td>
+                    <td>x/x</td>
+                    </tr>
+                }
+            }
+          
+  </tbody>
+</table>
+<a href="NewActivity" class="btn btn-dark">Add New Activity</a>
+
+
