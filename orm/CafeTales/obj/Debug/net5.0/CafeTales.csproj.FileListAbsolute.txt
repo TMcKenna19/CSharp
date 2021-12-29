@@ -37,3 +37,13 @@
 /Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/obj/Debug/net5.0/CafeTales.pdb
 /Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/obj/Debug/net5.0/CafeTales.genruntimeconfig.cache
 /Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/obj/Debug/net5.0/CafeTales.csproj.CopyComplete
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/Microsoft.Bcl.HashCode.dll
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.dll
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/MySqlConnector.dll
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/Newtonsoft.Json.dll
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/Pomelo.EntityFrameworkCore.MySql.dll
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/Pomelo.JsonObject.dll

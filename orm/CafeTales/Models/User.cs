@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CafeTales.Models
 {
@@ -14,6 +15,7 @@ namespace CafeTales.Models
 
         public string UserEmail {get;set;}
 
+        [DataType(DataType.Password)]
         public string Password {get;set;}
 
         public List<Coffee> MyCoffees {get;set;}
@@ -27,3 +29,6 @@ namespace CafeTales.Models
         public string confirm {get;set;}
     }
 }
+
+//db set up 
+// setting up navbar links in _Layout.cshtml
