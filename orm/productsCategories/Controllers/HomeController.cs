@@ -118,14 +118,6 @@ namespace productsCategories.Controllers
         }
 
 
-        
-
-
-
-
-
-
-
 
         
         //xxxxxxxxxxxxxxxxxxxxxxxxxx//

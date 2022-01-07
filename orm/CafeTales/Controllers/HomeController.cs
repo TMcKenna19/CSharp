@@ -25,9 +25,21 @@ namespace CafeTales.Controllers
             return View();
         }
 
+        //========================//
+        //LogReg Route
+        //=======================//
+        [HttpGet("RegLog")]
+        public IActionResult RegLog()
+        {
+            return View();
+        }
+        //Hello world working
 
 
-        //***************************//
+
+        //=============================//
+        // STOP
+        //=============================//
         public IActionResult Privacy()
         {
             return View();

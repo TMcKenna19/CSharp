@@ -19,6 +19,7 @@ namespace CafeTales.Models
         public string Password {get;set;}
 
         public List<Coffee> MyCoffees {get;set;}
+        public List<CupOfCoffee> MyCupOfCoffees {get;set;}
 
         public DateTime CreatedAt {get;set;} = DateTime.Now;
         public DateTime UpdatedAt {get;set;} = DateTime.Now;
@@ -30,5 +31,3 @@ namespace CafeTales.Models
     }
 }
 
-//db set up 
-// setting up navbar links in _Layout.cshtml

@@ -32,9 +32,7 @@ namespace SportsORM.Controllers
         public IActionResult Level1()
         {
             //1. all womens league
-            ViewBag.AllWomensLeague = _context.Leagues
-            .Where(league => league.Name.Contains("Womens"))
-            .ToList();
+            ViewBag.AllWomensLeague = _context.Leagues.Where(league => league.Name.Contains("Women")).ToList();
             
 
             //2. all leagues where sport is any type of hockey
@@ -51,7 +49,6 @@ namespace SportsORM.Controllers
             ViewBag.Conferences = _context.Leagues
             .Where(league => league.Name.Contains("Conference"))
             .ToList();
-
 
 
             //5. all leagues in the Atlantic region
@@ -112,15 +109,21 @@ namespace SportsORM.Controllers
            ViewBag.ThisThat = _context.Players
             .Where(league => league.FirstName.Contains("Alexander") || league.FirstName.Contains("Wyatt"))
             .ToList();
+
            return View();
 
         }
 
+        //=======================
+        //level 2 
+        //=======================
         [HttpGet("level_2")]
         public IActionResult Level2()
         {
-            return View();
+           return View();
         }
+        
+        
 
         [HttpGet("level_3")]
         public IActionResult Level3()

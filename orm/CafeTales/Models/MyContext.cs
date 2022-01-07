@@ -7,7 +7,8 @@ namespace CafeTales.Models
         public MyContext(DbContextOptions options) : base(options) { }
         
         public DbSet<User> Users { get; set; }
-        public DbSet<Coffee> Coffees { get; set; }  
+        public DbSet<Coffee> Coffees { get; set; }
+        public DbSet<CupOfCoffee> CupOfCoffees { get; set; } 
         
     }
 }  

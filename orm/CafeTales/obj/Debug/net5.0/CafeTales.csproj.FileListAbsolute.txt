@@ -47,3 +47,4 @@
 /Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/Newtonsoft.Json.dll
 /Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/Pomelo.EntityFrameworkCore.MySql.dll
 /Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/Pomelo.JsonObject.dll
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/obj/Debug/net5.0/Razor/Views/Home/RegLog.cshtml.g.cs
