@@ -48,3 +48,6 @@
 /Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/Pomelo.EntityFrameworkCore.MySql.dll
 /Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/bin/Debug/net5.0/Pomelo.JsonObject.dll
 /Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/obj/Debug/net5.0/Razor/Views/Home/RegLog.cshtml.g.cs
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/obj/Debug/net5.0/Razor/Views/Home/Journal.cshtml.g.cs
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/obj/Debug/net5.0/Razor/Views/Home/_LogInUser.cshtml.g.cs
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/obj/Debug/net5.0/Razor/Views/Home/Shop.cshtml.g.cs

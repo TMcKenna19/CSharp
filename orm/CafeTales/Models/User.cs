@@ -11,10 +11,16 @@ namespace CafeTales.Models
 
         public int UserId {get;set;}
 
+        [Required(ErrorMessage = "First name must have a name")]
+        [MinLength(2,ErrorMessage = "First name must be at least two characters")]
         public string UserFirstName {get;set;}
 
+        [Required(ErrorMessage = "Email must be a valid email")]
+        [EmailAddress]
         public string UserEmail {get;set;}
 
+        [Required]
+        [MinLength(8,ErrorMessage = "Password must be at least 8 characters")]
         [DataType(DataType.Password)]
         public string Password {get;set;}
 
