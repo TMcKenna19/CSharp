@@ -62,13 +62,14 @@ namespace CafeTales.Controllers
                 return View("RegLog");
             }
              
-        }
-        //Reg route working and saves user in db
+        }     
+             //Reg route working and saves user in db
 
+             
         //========================//
         //     Login Route
         //=======================//
-        [HttpPost("loginProcess")]
+        [HttpPost("LoginProcess")]
         public IActionResult Login(LogInUser logInUser)
         {
             if(ModelState.IsValid)
@@ -76,24 +77,31 @@ namespace CafeTales.Controllers
                 User userinDb = _context.Users.FirstOrDefault(u => u.UserEmail == logInUser.LogInEmail);
                 if(userinDb == null){
                     ModelState.AddModelError("Email","Log in info is incorrect");
-                    return View("Index");
+                    return View("RegLog");
                 }
                 PasswordHasher<LogInUser> Hasher = new PasswordHasher<LogInUser>();
                 PasswordVerificationResult result = Hasher.VerifyHashedPassword(logInUser, userinDb.Password, logInUser.LogInPassword);
                 if(result == 0){
                     ModelState.AddModelError("Email","Log in info is incorrect");
-                    return View("Index");
+                    return View("RegLog");
                 }
                 HttpContext.Session.SetInt32("UserId", userinDb.UserId); 
-                return RedirectToAction("Dashboard"); 
+                return RedirectToAction("Journal"); 
             }  else {
-                return View("Index");
+                return View("RegLog");
             }
             
+        }        //Login working with session 
+
+        //=====================
+        //   Logout Route
+        //=====================
+        [HttpGet("Logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index");
         }
-        //finish seting up session and test login 
-
-
 
 
         //========================//
@@ -102,14 +110,32 @@ namespace CafeTales.Controllers
         [HttpGet("Journal")]
         public IActionResult Journal()
         {
+            if(HttpContext.Session.GetInt32("UserId") == null)
+            {
+            return RedirectToAction("RegLog");
+
+        } else{
             return View();
+            } 
         }
+
+        
 
         //========================//
         //    Shop Route
         //=======================//
         [HttpGet("Shop")]
         public IActionResult Shop()
+        {
+            return View();
+        }
+
+
+        //========================//
+        //    Education Route
+        //=======================//
+        [HttpGet("Education")]
+        public IActionResult Education()
         {
             return View();
         }
