@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using CafeTales.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 
 namespace CafeTales.Controllers
 {
@@ -55,7 +56,7 @@ namespace CafeTales.Controllers
                 newUser.Password = Hasher.HashPassword(newUser, newUser.Password);
                 _context.Add(newUser);  //Add newUser to database 
                 _context.SaveChanges(); //Saves newUser to database
-
+        
                 return RedirectToAction("Journal");
 
             } else{
@@ -116,8 +117,28 @@ namespace CafeTales.Controllers
 
         } else{
             return View();
-            } 
+            }
+        
+            // return View(); 
+            
         }
+
+        [HttpPost("AddCoffee")]
+        public IActionResult AddCoffee(Coffee NewCoffee)
+        {
+            if(ModelState.IsValid)
+            {   
+                NewCoffee.UserId = (int)HttpContext.Session.GetInt32("UserId");
+                _context.Add(NewCoffee); //adds to db
+                _context.SaveChanges(); //saves to db
+                return RedirectToAction("Journal");
+            }else{
+                return View("Journal"); 
+            }
+                    
+        }
+
+
 
         
 

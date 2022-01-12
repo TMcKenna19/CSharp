@@ -1,1 +1,30 @@
-<h1>** Journal **</h1>
+@model Coffee
+
+<div class="text-center">
+    <h1>Add a Coffee Entry</h1>
+    <form action="AddCoffee" method="post">
+        <div class="form-group" method="post">
+            <label>Coffee Name</label>
+            <input asp-for="CoffeeName" class="form-control">
+            <span asp-validation-for="CoffeeName" class="text-danger"></span>
+        </div>
+        <div class="form-group" method="post">
+            <label>Roaster Name</label>
+            <input asp-for="RoasterName" class="form-control">
+            <span asp-validation-for="RoasterName" class="text-danger"></span>
+        </div>        
+        <div class="form-group" method="post">
+            <label>Roast Type</label>
+            <input asp-for="RoastType" class="form-control" placeholder="Light, Medium, Dark">
+            <span asp-validation-for="RoastType" class="text-danger"></span>
+        </div>        
+        <div>
+            <label for="text">Description</label>
+            <textarea name="Description" id="" cols="70" rows="5" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div>            
+            <input type="submit" class="btn btn-lg btn-info shadow mb-5 mt-3" value="Add Coffee">
+        </div>
+    </form>
+</div>
