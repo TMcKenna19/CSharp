@@ -52,3 +52,4 @@
 /Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/obj/Debug/net5.0/Razor/Views/Home/_LogInUser.cshtml.g.cs
 /Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/obj/Debug/net5.0/Razor/Views/Home/Shop.cshtml.g.cs
 /Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/obj/Debug/net5.0/Razor/Views/Home/Education.cshtml.g.cs
+/Users/yukon/Documents/codingDojo/CSharp/orm/CafeTales/obj/Debug/net5.0/Razor/Views/Home/_MakeACup.cshtml.g.cs

@@ -19,6 +19,14 @@ namespace CafeTales.Models
 
         public string CupOfDescription {get;set;}
 
+        public string H2oTemp {get;set;}
+
+        public string BrewMethod {get;set;}
+
+        public string GrindSize {get;set;}
+
+        public string Rating {get;set;}
+
         public int UserId {get;set;}
 
         public User MyUser {get;set;}

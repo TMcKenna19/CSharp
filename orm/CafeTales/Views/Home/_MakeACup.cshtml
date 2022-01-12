@@ -1,0 +1,51 @@
+@model CupOfCoffee
+
+<div class="form-group mr-4">
+    <h1>Add a Cup of Coffee</h1>
+    <form action="AddCoffee" method="post">
+        <div class="row" method="post">
+            <label>Coffee Name</label>
+            <input asp-for="CupOfCoffeeName" class="form-control">
+            <span asp-validation-for="CupOfCoffeeName" class="text-danger"></span>
+        </div>
+        <div class="form-group" method="post">
+            <label>Roaster Name</label>
+            <input asp-for="CupOfRoasterName" class="form-control">
+            <span asp-validation-for="CupOfRoasterName" class="text-danger"></span>
+        </div>        
+        <div class="form-group" method="post">
+            <label>Roast Type</label>
+            <input asp-for="CupOfRoastType" class="form-control" placeholder="Light, Medium, Dark">
+            <span asp-validation-for="CupOfRoastType" class="text-danger"></span>
+        </div>        
+        <div class="form-group" method="post">
+            <label>H2o Temp</label>
+            <input asp-for="H2oTemp" class="form-control" placeholder="212">
+            <span asp-validation-for="H2oTemp" class="text-danger"></span>
+        </div>        
+        <div class="form-group" method="post">
+            <label>Brew Method</label>
+            <input asp-for="BrewMethod" class="form-control" placeholder="V60, Espresso, Chemex">
+            <span asp-validation-for="BrewMethod" class="text-danger"></span>
+        </div>        
+        <div class="form-group" method="post">
+            <label>Grind Size</label>
+            <input asp-for="GrindSize" class="form-control" placeholder="Course, Medium, Fine">
+            <span asp-validation-for="GrindSize" class="text-danger"></span>
+        </div>        
+        <div class="form-group" method="post">
+            <label>Rating</label>
+            <input asp-for="Rating" class="form-control" placeholder="">
+            <span asp-validation-for="Rating" class="text-danger"></span>
+        </div>        
+        <div>
+            <label for="text">Description</label>
+            <textarea name="CupOfDescription" id="" cols="70" rows="5" class="form-control"></textarea>
+            <span asp-validation-for="CupOfDescription" class="text-danger"></span>
+        </div>
+        <div>            
+            <input type="submit" class="btn btn-lg btn-info shadow mb-5 mt-3" value="Add Cup">           
+        </div>
+    </form>
+
+    @* Make coffee name, roster name, drop downs *@

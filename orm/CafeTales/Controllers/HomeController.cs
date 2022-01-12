@@ -123,6 +123,9 @@ namespace CafeTales.Controllers
             
         }
 
+        //========================//
+        //    Add Coffee Route
+        //=======================//
         [HttpPost("AddCoffee")]
         public IActionResult AddCoffee(Coffee NewCoffee)
         {
@@ -138,9 +141,12 @@ namespace CafeTales.Controllers
                     
         }
 
+        //========================//
+        //  Cup of Coffee Route
+        //=======================//
+        // set up submit route
 
 
-        
 
         //========================//
         //    Shop Route
