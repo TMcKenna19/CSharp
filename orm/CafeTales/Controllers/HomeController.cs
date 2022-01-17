@@ -140,11 +140,26 @@ namespace CafeTales.Controllers
             }
                     
         }
+            //add coffee route working and saving in db
 
-        //========================//
-        //  Cup of Coffee Route
-        //=======================//
-        // set up submit route
+
+        //============================//
+        //  Add Cup of Coffee Route
+        //===========================//
+        [HttpPost("AddCupOfCoffee")]
+        public IActionResult AddCupOfCoffee(CupOfCoffee NewCupOfCoffee)
+        {
+           if(ModelState.IsValid)
+           {
+               NewCupOfCoffee.UserId = (int)HttpContext.Session.GetInt32("UserId");
+               _context.Add(NewCupOfCoffee); //adds to db
+               _context.SaveChanges(); //saves to db
+               return RedirectToAction("Journal");
+           }else{
+               return View("Journal");
+           }
+
+        } //fix validation issue on submit coffee when submitting cup of coffee
 
 
 

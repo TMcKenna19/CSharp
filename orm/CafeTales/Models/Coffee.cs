@@ -11,13 +11,13 @@ namespace CafeTales.Models
 
         public int CoffeeId {get;set;}
         
-        [Required(ErrorMessage = "Please add a coffee name")]
+        [Required(ErrorMessage = "Please add a Coffee Name")]
         public string CoffeeName {get;set;}
 
-        [Required(ErrorMessage = "Please add a roster name")]
+        [Required(ErrorMessage = "Please add a Roster Name")]
         public string RoasterName {get;set;}
 
-        [Required(ErrorMessage = "Please add a Roast type")]
+        [Required(ErrorMessage = "Please add a Roast Type")]
         public string RoastType {get;set;}
 
         public string Description {get;set;}
