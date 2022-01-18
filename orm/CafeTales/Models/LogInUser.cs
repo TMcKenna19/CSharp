@@ -5,11 +5,11 @@ namespace CafeTales.Models
 {
     public class LogInUser
     {
-        [Required]
+        [Required(ErrorMessage = "Please enter valid email")]
         [EmailAddress]
         public string LogInEmail {get;set;}
 
-        [Required]
+        [Required(ErrorMessage = "Password must be at least 8 characters")]
         [DataType(DataType.Password)]
         public string LogInPassword {get;set;}
     }
