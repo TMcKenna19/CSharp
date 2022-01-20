@@ -116,6 +116,7 @@ namespace CafeTales.Controllers
             return RedirectToAction("RegLog");
 
         } else{
+            ViewBag.AllCoffees = _context.Coffees.Include(c => c.MyCoffees).ToList();
             return View();
             }
         
@@ -159,7 +160,7 @@ namespace CafeTales.Controllers
                return View("Journal");
            }
 
-        } //fix validation issue on submit coffee when submitting cup of coffee
+        } //add cup of coffee route working and saving in db
 
 
 

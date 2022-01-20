@@ -2,12 +2,23 @@
 
 <div class="form-group mr-4">
     <h1>Add a Cup of Coffee</h1>
-    <form action="AddCoffee" method="post">
-        <div class="row" method="post">
+    <form action="AddCupOfCoffee" method="post">
+        @* <div class="row" method="post">
             <label>Coffee Name</label>
             <input asp-for="CupOfCoffeeName" class="form-control">
             <span asp-validation-for="CupOfCoffeeName" class="text-danger"></span>
-        </div>
+        </div> *@
+        <label for="CupOfCoffeeName">Coffee Name</label>
+        <select asp-for="CupOfCoffeeName">
+            @{
+                foreach(Coffee c in @ViewBag.AllCoffees)
+                {
+                    <option value="@c.MyCoffees">Coffee @c.CoffeeName</option>
+                }
+            }
+        </select>
+
+
         <div class="form-group" method="post">
             <label>Roaster Name</label>
             <input asp-for="CupOfRoasterName" class="form-control">

@@ -26,7 +26,11 @@ namespace CafeTales.Models
 
         public User MyUser {get;set;}
 
+        public List<Coffee> MyCoffees {get;set;}
+
         public DateTime CreatedAt {get;set;} = DateTime.Now;
         public DateTime UpdatedAt {get;set;} = DateTime.Now;
     }
 }
+
+//update db, added line 29
