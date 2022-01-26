@@ -36,11 +36,10 @@ namespace CafeTales.Models
 
         public int UserId {get;set;}
 
-        // public int CoffeeId {get;set;}
-
         public User MyUser {get;set;}
 
-        // public Coffee MyCoffee {get;set;}
+        public List<CupOfCoffee> MyCupOfCoffees {get;set;}
+      
 
         public DateTime CreatedAt {get;set;} = DateTime.Now;
         public DateTime UpdatedAt {get;set;} = DateTime.Now;

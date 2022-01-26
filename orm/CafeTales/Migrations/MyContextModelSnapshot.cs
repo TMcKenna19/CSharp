@@ -23,6 +23,9 @@ namespace CafeTales.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<int?>("CoffeeId1")
+                        .HasColumnType("int");
+
                     b.Property<string>("CoffeeName")
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
@@ -49,6 +52,8 @@ namespace CafeTales.Migrations
 
                     b.HasKey("CoffeeId");
 
+                    b.HasIndex("CoffeeId1");
+
                     b.HasIndex("UserId");
 
                     b.ToTable("Coffees");
@@ -61,30 +66,40 @@ namespace CafeTales.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("BrewMethod")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<int?>("CupOfCoffeeId1")
+                        .HasColumnType("int");
+
                     b.Property<string>("CupOfCoffeeName")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("CupOfDescription")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("CupOfRoastType")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("CupOfRoasterName")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("GrindSize")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("H2oTemp")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Rating")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -94,6 +109,8 @@ namespace CafeTales.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("CupOfCoffeeId");
+
+                    b.HasIndex("CupOfCoffeeId1");
 
                     b.HasIndex("UserId");
 
@@ -131,6 +148,10 @@ namespace CafeTales.Migrations
 
             modelBuilder.Entity("CafeTales.Models.Coffee", b =>
                 {
+                    b.HasOne("CafeTales.Models.Coffee", null)
+                        .WithMany("MyCoffees")
+                        .HasForeignKey("CoffeeId1");
+
                     b.HasOne("CafeTales.Models.User", "MyUser")
                         .WithMany("MyCoffees")
                         .HasForeignKey("UserId")
@@ -140,6 +161,10 @@ namespace CafeTales.Migrations
 
             modelBuilder.Entity("CafeTales.Models.CupOfCoffee", b =>
                 {
+                    b.HasOne("CafeTales.Models.CupOfCoffee", null)
+                        .WithMany("MyCupOfCoffees")
+                        .HasForeignKey("CupOfCoffeeId1");
+
                     b.HasOne("CafeTales.Models.User", "MyUser")
                         .WithMany("MyCupOfCoffees")
                         .HasForeignKey("UserId")

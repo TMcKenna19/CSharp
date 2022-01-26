@@ -74,3 +74,27 @@ body {
 #showcase{
   margin-top: 10px;
 }
+
+/* .video {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+} */
+
+/* video */
+.full-screen-video-container{
+  position: relative;
+  height: 90vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.full-screen-video-container video{
+  position: center;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+}
