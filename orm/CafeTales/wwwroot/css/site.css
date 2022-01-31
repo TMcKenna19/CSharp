@@ -97,6 +97,20 @@ body {
   z-index: 5;
 }
 
+/* .bgImage {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+} */
+
+.text {
+  position: absolute;
+  color: #f5ecec;
+  top: 20%;
+  left: 50%;
+  font-size: 50px;
+  transform: translate(-50%, -50%);
+}
+
 
 
 
