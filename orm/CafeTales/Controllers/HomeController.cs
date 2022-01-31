@@ -122,7 +122,7 @@ namespace CafeTales.Controllers
         
             // return View(); 
             
-        } //nameList = productList.Select(p => p.ToString()).ToList();
+        }
 
         //========================//
         //    Add Coffee Route
@@ -163,11 +163,17 @@ namespace CafeTales.Controllers
            }
 
         } //add cup of coffee route working and saving in db
-
-          // ** new issue, with drop down CupOfCoffeeName & CupOfRosterName return System.Collections.Generic.List`1[CafeTales.Models.Coffee] into data base 
+ 
 
           
-
+        //=======================//
+        //    About Route
+        //=======================//
+        [HttpGet("About")]
+        public IActionResult About()
+        {
+            return View();
+        }
 
 
         //========================//
