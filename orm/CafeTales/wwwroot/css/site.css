@@ -112,6 +112,18 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* shop */
+.card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+}
+
+.card-text {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
 
 
 
