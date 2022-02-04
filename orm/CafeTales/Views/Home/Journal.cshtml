@@ -35,7 +35,32 @@
                     <partial name="_MakeACup" />
                 </div>
             </div>
-
         </div>
     </div>
 </div>
+
+@* display coffee and cups entrys below *@
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Roaster Name</th>
+      <th scope="col">Coffee Name</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"></th>
+      <td>@{
+                    foreach(Coffee c in @ViewBag.AllCoffees)
+                    {
+                        <option value="@c.RoasterName">@c.RoasterName</option>
+                    }
+                }
+
+      </td>
+    </tr>
+  </tbody>
+</table>
